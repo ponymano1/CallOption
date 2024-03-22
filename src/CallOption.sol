@@ -6,6 +6,10 @@ import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol";
 import {Test, console} from "forge-std/Test.sol";
+
+/**
+    * CallOption: 期权合约,看涨期权
+ */
 contract CallOption is ERC20Permit {
     using SafeERC20 for IERC20;
     address internal immutable _underlyingAsset;//对应的质押资产
